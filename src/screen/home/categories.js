@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native";
 
+import Ficon from 'react-native-vector-icons/Feather'
+
 import hamburguer from '../../../assets/Food/Hamburguer.png'
 import coxinha from '../../../assets/Food/coxinha.png'
 import orangeJuice from '../../../assets/Food/orangeJuice.png'
@@ -36,11 +38,12 @@ const styles = StyleSheet.create({
     categories: {
         marginLeft: 10,
         marginTop: 30,
+        marginBottom: 30,
     },
     title: {
         fontSize: 20,
         color: "#000",
-        fontWeight: '600',
+        fontFamily: 'Archivo-SemiBold',
        
     },
 
@@ -58,17 +61,17 @@ const styles = StyleSheet.create({
         elevation: 1,
         marginLeft: 20,
         alignItems: 'center',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
     },
 
     cartImage: {
-        width: 60,
-        height: 70,
+        width: 50,
+        height: 60,
     },
 
     cartText: {
         fontSize: 12,
         color: "#000",
-        fontWeight: '400',
+        fontFamily: 'Archivo-Regular',
     },
 })

@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         textAlign: 'center',
         color: '#181818',
-    
+        fontFamily: 'Archivo-SemiBold',
         fontWeight: '600',
         
     },
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: '#000',
        width: '90%',
-       
+       fontFamily: 'Archivo-Regular',
      
     },
 })
