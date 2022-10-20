@@ -2,7 +2,7 @@ FoodPass
 > An Food App made with React Native CLI!
 <div style="display: flex">
 
-![AppGif](https://user-images.githubusercontent.com/89549484/197025513-6f1e125d-a74f-4ca8-85ce-1ce9657bb5a6.gif)
+<img height='500em' src="https://media.discordapp.net/attachments/955093666807054386/1032717658073862154/AppGif.gif?width=311&height=661" />
 
 
 
