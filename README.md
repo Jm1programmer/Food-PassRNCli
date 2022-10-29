@@ -3,7 +3,8 @@ FoodPass
 <div style="display: flex">
 
 
-![Android Emulator - Android_12_5554 2022-10-29 18-29-19 (1)](https://user-images.githubusercontent.com/89549484/198854008-f03dfb9d-f105-4829-a21b-1aae9796a003.gif)
+<img src="https://media.discordapp.net/attachments/955093666807054386/1036038770123878441/198854008-f03dfb9d-f105-4829-a21b-1aae9796a003.gif" alt="App">
+
 
 
 
