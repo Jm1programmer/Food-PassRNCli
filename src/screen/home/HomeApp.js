@@ -6,13 +6,17 @@ import Header from "./header";
 import Info from "./Info";
 import FoodMenu from "./FoodMenu";
 import Recomendados from "./recomendados";
+import ScreenMenu from "../../components/ChangeScreenMenu";
+
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function HomeScreen() {
     return <>
     <View style={styles.screen}>
         
         <FoodMenu header={Header}  info={Info} categories={Categories} recomendados={Recomendados} />
-        
+       
+        <ScreenMenu />
     </View>
    
     

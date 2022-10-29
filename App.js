@@ -12,21 +12,17 @@ import SearchScreen from "./src/screen/search/SearchApp";
 import BuyScreen from "./src/screen/BuyScreen";
 import BuyConfirmScreen from "./src/screen/BuyConfirm/Index";
 
+import StackRoutes from "./src/screen/StackRoutes";
+
+
 export default  function App() {
   return <>
       <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home"
-      screenOptions={{
-    headerShown: false
-  }} 
-  >
-        <Stack.Screen name="Home" component={HomeScreen}  />
+      <StackRoutes />
       
-        <Stack.Screen name="Buy" component={BuyScreen}  />
-        <Stack.Screen name="buyConfirm" component={BuyConfirmScreen}  />
-        
-      </Stack.Navigator>
     </NavigationContainer>
+
+    
   </>
  
 

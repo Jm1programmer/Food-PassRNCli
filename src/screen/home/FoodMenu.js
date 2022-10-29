@@ -3,6 +3,7 @@ import { FlatList, Text, StyleSheet, View, TextInput, Dimensions } from "react-n
 import Menu from "./Menu";
 import { CarregaMenu } from "../../services/CarregaDados";
 import Ficon from 'react-native-vector-icons/Feather'
+import FoodFlatlist from "../../components/FoodFlatlist";
 
 export default function FoodMenu({header: Header, info: Info, categories: Categories, recomendados: Recomendados,}) {
 
@@ -35,15 +36,9 @@ export default function FoodMenu({header: Header, info: Info, categories: Catego
  
 
     return <>
-        <FlatList style={styles.FlatList}
-        data={lista}
-        renderItem={({ item }) =>  <Menu  {...item}  />  }
-        keyExtractor={({nome}) => nome}
-        ListHeaderComponent={Topo}
-        showsHorizontalScrollIndicator={false}
-        showsVerticalScrollIndicator={false}
-        
-         />
+       
+        <FoodFlatlist Topo={Topo}/>
+         
     </>
 }
     const height = Dimensions.get('screen').height

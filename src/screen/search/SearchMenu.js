@@ -1,85 +1,52 @@
 import React, {useEffect, useState } from "react";
-import { FlatList, Text, StyleSheet, View, TextInput, Dimensions } from "react-native";
-import SearchedFood from "./SearchedFood";
-
+import { FlatList, Text, StyleSheet, View, TextInput, Dimensions, TouchableOpacity } from "react-native";
+import Menu from "../home/Menu";
 import { CarregaMenu } from "../../services/CarregaDados";
 import Ficon from 'react-native-vector-icons/Feather'
+import FoodFlatlist from "../../components/FoodFlatlist";
 
 export default function SearchMenu() {
-    const [searchText, setSearchText] = useState('')
-    const [lista, setLista] = useState([]);
- 
-    
-    useEffect(() => {
-        const retorno = CarregaMenu();
-       
-       setLista(retorno.lista);
-    }, );
+
+    [oText, SetoText] = useState('abv')
 
 
-    
-
-   const Input = () => {
-    return <>
-    <View style={styles.Input}>
-    <Ficon name="search" size={25} color="#E81C23" />
    
-        <TextInput style={styles.InputText}    
-      
-        placeholder="Pesquise sua comida favorita..."
-        selectionColor={'#909090'} 
-        onChangeText={setSearchText}
-        value={searchText}
-      
-   
-        
-        />
-    </View>
-    </>
-   }
  
 
     const Topo = () => {
         return <>
-        <Input />
-        <View style={styles.InfoView}>
-        <Text style={styles.title}>Results</Text>
-        <Text style={styles.FoodFound}>XX Comidas Encontradas</Text>
-        </View>
+       <TouchableOpacity style={styles.Input}>
+    <Ficon name="search" size={25} color="#E81C23" />
+   
+        <TextInput style={styles.InputText}        
+        placeholder="Pesquise sua comida favorita..."
+        selectionColor={'#909090'} 
+        value={oText}
+        onChangeText={SetoText}
+        />
+    </TouchableOpacity>
+        
+        <Text style={styles.title}>Popular</Text>
        </>
     }
 
  
 
     return <>
-        <FlatList style={styles.FlatList}
-        data={lista}
-        renderItem={({ item }) =>  <SearchedFood  {...item}  />  }
-        keyExtractor={({nome}) => nome}
-        ListHeaderComponent={Topo}
-        showsHorizontalScrollIndicator={false}
-        showsVerticalScrollIndicator={false}
-        
-         />
+       
+        <FoodFlatlist Topo={Topo}/>
+         
     </>
 }
     const height = Dimensions.get('screen').height
     const styles = StyleSheet.create({
-
-        InfoView: {
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            paddingHorizontal: 10,
-          
-            marginTop: 10,
-            marginBottom: 10,
-        },
         title: {
             fontSize: 20,
             color: "#000",
             fontFamily: 'Archivo-SemiBold',
-           
+            marginLeft: 10,
+            marginTop: 10,
+            marginBottom: 10,
         },
 
         Input: {
@@ -106,13 +73,6 @@ export default function SearchMenu() {
            width: '90%',
            fontFamily: 'Archivo-Regular',
          
-        },
-
-        FoodFound: {
-            fontSize: 14,
-            color: '#808080',
-          
-           fontFamily: 'Archivo-Regular',
         },
 
       

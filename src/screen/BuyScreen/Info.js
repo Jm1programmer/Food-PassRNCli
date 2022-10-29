@@ -13,6 +13,7 @@ export default function Info() {
 
     const route = useRoute()
     const priceOld = Number(quantidade * route.params.preco)
+    const preco = route.params.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
     const price = priceOld.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
     const Tempo = Number(route.params.Tempo * quantidade)
     return <>
@@ -47,7 +48,7 @@ export default function Info() {
 
        </View>
 
-       <Text style={styles.Price}>{ price}</Text>
+       <Text style={styles.Price}>{ preco}</Text>
 
        <View style={styles.SobreView}>
         <Text style={styles.sobreText}>Sobre</Text>
@@ -71,6 +72,7 @@ export default function Info() {
                 navigation.navigate("buyConfirm")
             }}>
                     <Text style={styles.buttonQuanty}>{`${quantidade} items`}</Text>
+                  
                     <Text style={styles.buttonPrice}><Text style={styles.ButtonNumberPrice}>{` ${(price)}`}</Text></Text>
             </TouchableOpacity>
             </View>
