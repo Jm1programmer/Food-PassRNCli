@@ -62,6 +62,12 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         alignItems: 'center',
         justifyContent: 'center',
+
+      
+    
+        
+
+        
     },
 
     cartImage: {

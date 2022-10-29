@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Text, View, Image, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native";
 import Ficon from 'react-native-vector-icons/AntDesign'
 
-export default function Menu({nome, imagem, preco, desc,  Tempo, nota,  }) {
+export default function SearchedFood({nome, imagem, preco, desc,  Tempo, nota,  }) {
         const [ selecionado, setSelecionado] = useState(false);
         return <>
         
-        <TouchableOpacity style={styles.cartao} onPress={() => {
-              
-        }}>
+        <TouchableOpacity style={styles.cartao} onPress={() => setSelecionado(!selecionado)}>
                 <Image style={styles.imagem} source={imagem} accessibilityLabel={nome} />
                 <View style={styles.info}>
                 <View>
@@ -46,13 +44,9 @@ const styles = StyleSheet.create({
             marginHorizontal: 8,
             borderRadius: 6,
             flexDirection: 'row',
-            Minheight: 120,
-            maxHeight: 135,
+            height: 120,
             // Android
             elevation: 2,
-
-           
-            
 
             // Ios
             shadowColor: "#000",

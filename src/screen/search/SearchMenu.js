@@ -1,34 +1,51 @@
 import React, {useEffect, useState } from "react";
 import { FlatList, Text, StyleSheet, View, TextInput, Dimensions } from "react-native";
-import Menu from "./Menu";
+import SearchedFood from "./SearchedFood";
+
 import { CarregaMenu } from "../../services/CarregaDados";
 import Ficon from 'react-native-vector-icons/Feather'
 
-export default function FoodMenu({header: Header, info: Info, categories: Categories, recomendados: Recomendados,}) {
-
+export default function SearchMenu() {
+    const [searchText, setSearchText] = useState('')
     const [lista, setLista] = useState([]);
  
+    
     useEffect(() => {
         const retorno = CarregaMenu();
        
-        
        setLista(retorno.lista);
-    }, []);
+    }, );
 
 
+    
+
+   const Input = () => {
+    return <>
+    <View style={styles.Input}>
+    <Ficon name="search" size={25} color="#E81C23" />
    
+        <TextInput style={styles.InputText}    
+      
+        placeholder="Pesquise sua comida favorita..."
+        selectionColor={'#909090'} 
+        onChangeText={setSearchText}
+        value={searchText}
+      
+   
+        
+        />
+    </View>
+    </>
+   }
  
 
     const Topo = () => {
         return <>
-        <Header />
-        <Info />
-     
-        <Categories />
-
-        <Recomendados />
-        
-        <Text style={styles.title}>Popular</Text>
+        <Input />
+        <View style={styles.InfoView}>
+        <Text style={styles.title}>Results</Text>
+        <Text style={styles.FoodFound}>XX Comidas Encontradas</Text>
+        </View>
        </>
     }
 
@@ -37,7 +54,7 @@ export default function FoodMenu({header: Header, info: Info, categories: Catego
     return <>
         <FlatList style={styles.FlatList}
         data={lista}
-        renderItem={({ item }) =>  <Menu  {...item}  />  }
+        renderItem={({ item }) =>  <SearchedFood  {...item}  />  }
         keyExtractor={({nome}) => nome}
         ListHeaderComponent={Topo}
         showsHorizontalScrollIndicator={false}
@@ -48,13 +65,21 @@ export default function FoodMenu({header: Header, info: Info, categories: Catego
 }
     const height = Dimensions.get('screen').height
     const styles = StyleSheet.create({
+
+        InfoView: {
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            paddingHorizontal: 10,
+          
+            marginTop: 10,
+            marginBottom: 10,
+        },
         title: {
             fontSize: 20,
             color: "#000",
             fontFamily: 'Archivo-SemiBold',
-            marginLeft: 10,
-            marginTop: 10,
-            marginBottom: 10,
+           
         },
 
         Input: {
@@ -81,6 +106,13 @@ export default function FoodMenu({header: Header, info: Info, categories: Catego
            width: '90%',
            fontFamily: 'Archivo-Regular',
          
+        },
+
+        FoodFound: {
+            fontSize: 14,
+            color: '#808080',
+          
+           fontFamily: 'Archivo-Regular',
         },
 
       

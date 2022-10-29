@@ -8,15 +8,20 @@ const Stack = createNativeStackNavigator();
 
 
 import HomeScreen from "./src/screen/home/HomeApp";
+import SearchScreen from "./src/screen/search/SearchApp";
+import BuyScreen from "./src/screen/BuyScreen";
 
 export default  function App() {
   return <>
       <NavigationContainer>
-      <Stack.Navigator 
+      <Stack.Navigator initialRouteName="Home"
       screenOptions={{
     headerShown: false
-  }} >
+  }} 
+  >
         <Stack.Screen name="Home" component={HomeScreen}  />
+        <Stack.Screen name="Search" component={SearchScreen}  />
+        <Stack.Screen name="Buy" component={BuyScreen}  />
       </Stack.Navigator>
     </NavigationContainer>
   </>

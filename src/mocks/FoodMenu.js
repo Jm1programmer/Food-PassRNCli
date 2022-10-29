@@ -7,8 +7,9 @@ import Pizza from '../../assets/Food/Pizza.png'
 import Pudim from '../../assets/Food/Pudim.png'
 import Torta from '../../assets/Food/Torta.png'
 
+
 const gerarNumeroAleatorio = (min,max) => {
-    return Math.floor(Math.random(max - min + 1) * 100)
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 const Menu = {
@@ -17,10 +18,10 @@ const Menu = {
         
         nome: "Hamburguer",
         imagem: HamburguerCarne,
-        Tempo: `${gerarNumeroAleatorio(1, 10)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(.01, .1)}.5`,
-        desc: 'Lorem ipsum dolor sit amet, consecteturadipiscing elit',
+        Tempo: `${gerarNumeroAleatorio(1, 5)}min`,
+        preco: `R$ 6.00`,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
+        desc: '2 fatias de mussarela, 2 pães para hambúrguer, Maionese, 2 rodelas de tomate e 2 folhas de alface',
 
     },
 
@@ -87,10 +88,18 @@ const Menu = {
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 
+
+ 
+
    
 
     ]
 };
 
 
+
+
 export default Menu
+
+
+

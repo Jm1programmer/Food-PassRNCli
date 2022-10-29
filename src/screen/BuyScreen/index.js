@@ -1,18 +1,14 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-
-import Categories from "./categories";
 import Header from "./header";
 import Info from "./Info";
-import FoodMenu from "./FoodMenu";
-import Recomendados from "./recomendados";
 
-export default function HomeScreen() {
+export default function BuyScreen( { navigation }) {
     return <>
     <View style={styles.screen}>
-        
-        <FoodMenu header={Header}  info={Info} categories={Categories} recomendados={Recomendados} />
-        
+      
+       <Header />
+        <Info />
     </View>
    
     

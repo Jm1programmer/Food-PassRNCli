@@ -1,20 +1,29 @@
 import React from "react";
-import { Text, View, StyleSheet, TextInput, Dimensions } from "react-native";
+import { Text, View, StyleSheet, TextInput, Dimensions, TouchableOpacity } from "react-native";
 import Ficon from 'react-native-vector-icons/Feather'
+
+
+function search(s) {
+    
+}
+
 
 export default function Info() {
     return <>
    <View style={styles.TextThingView}>
     <Text style={styles.TextThing}>O que você precisa para o </Text> 
-    <Text style={[styles.TextThing, styles.TextThingColor]}  >Lanche?</Text>
+    <Text style={[styles.TextThing, styles.TextThingColor]} >Lanche?</Text>
     </View>
 
-    <View style={styles.Input}>
+    <TouchableOpacity style={styles.Input}>
     <Ficon name="search" size={25} color="#E81C23" />
+   
         <TextInput style={styles.InputText}        
-        placeholder="Pesquise sua comida favorita"
-        selectionColor={'#909090'} />
-    </View>
+        placeholder="Pesquise sua comida favorita..."
+        selectionColor={'#909090'} 
+        editable={false}
+        />
+    </TouchableOpacity>
     </>
 }
 
