@@ -1,15 +1,17 @@
+
 import React, {useState, useEffect} from "react";
 import { Text, StyleSheet, View, Image, FlatList, TouchableOpacity, Alert, Button } from "react-native";
 import RedGradient from "../../../assets/BackgroundGradients/RedGradient.png"
 import { CarregaRecomendados } from "../../services/RecomendadosDados";
+import { useNavigation } from '@react-navigation/native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import BuyScreen from "../BuyScreen";
 
-export default function Recomendados( {navigation }) {
+export default function Recomendados( ) {
 const [lista, setLista] = useState([]);
+
+
  
     useEffect(() => {
         const retorno = CarregaRecomendados();
@@ -36,15 +38,19 @@ const [lista, setLista] = useState([]);
     </>
 }
 
- function Carts({nome, imagem, preco, desc,  Tempo, nota, navigation  }) {
+ function Carts({nome, imagemHome, preco, desc,  Tempo, nota, imagem }) {
+    const navigation = useNavigation()
+    const Preco = preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
     return <>
-<TouchableOpacity onPress={() => { navigation.navigate()}} >
+<TouchableOpacity onPress={() => {
+    navigation.navigate('Buy', {nome: nome, Imagem: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
+ } }>
         <View style={styles.cart}>
         <Image style={styles.background} source={RedGradient} />
         <Text style={styles.foodName}>{nome}</Text>
         
-        <Image style={styles.food} source={imagem} resizeMode={'contain'} />
-        <Text style={styles.Money}>{preco}</Text>
+        <Image style={styles.food} source={imagemHome} resizeMode={'contain'} />
+        <Text style={styles.Money}>{`${Preco}`}</Text>
     
     </View>
 </TouchableOpacity>

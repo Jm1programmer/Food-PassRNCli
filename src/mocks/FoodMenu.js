@@ -6,6 +6,7 @@ import HamburguerCarne from '../../assets/Food/HamburguerCarne.png'
 import Pizza from '../../assets/Food/Pizza.png'
 import Pudim from '../../assets/Food/Pudim.png'
 import Torta from '../../assets/Food/Torta.png'
+import Croiassant from '../../assets/Food/croissantBuy.png'
 
 
 const gerarNumeroAleatorio = (min,max) => {
@@ -18,8 +19,8 @@ const Menu = {
         
         nome: "Hamburguer",
         imagem: HamburguerCarne,
-        Tempo: `${gerarNumeroAleatorio(1, 5)}min`,
-        preco: `R$ 6.00`,
+        Tempo: 2,
+        preco: 6,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: '2 fatias de mussarela, 2 pães para hambúrguer, Maionese, 2 rodelas de tomate e 2 folhas de alface',
 
@@ -28,63 +29,72 @@ const Menu = {
     {
         nome: "Pizza",
         imagem: Pizza,
-        Tempo: `${gerarNumeroAleatorio(1, 10)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(1, 10)}`,
+        Tempo: 1,
+        preco: 6,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 
     {
         nome: "Coxinha",
         imagem: Coxinhas,
-        Tempo: `${gerarNumeroAleatorio(1, 10)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(1, 10)}`,
+        Tempo: 2,
+        preco: 5,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 
     {
         nome: "Esfirra",
         imagem: Esfirra,
-        Tempo: `${gerarNumeroAleatorio(1, 10)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(1, 10)}`,
+        Tempo: 1,
+        preco: 4,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 
     {
         nome: "Brownie",
         imagem: Brownie,
-        Tempo: `${gerarNumeroAleatorio(1, 10)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(1, 10)}`,
+        Tempo: 1,
+        preco: 3,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 
     {
-        nome: "Bolo de Chocolate",
+        nome: "Bolo Fatia",
         imagem: Bolo,
-        Tempo: `${gerarNumeroAleatorio(1, 10)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(1, 10)}`,
+        Tempo: 0.5,
+        preco: 8.99,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 
     {
         nome: "Torta",
         imagem: Torta,
-        Tempo: `${gerarNumeroAleatorio(1, 20)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(1, 10)}`,
+        Tempo: 2,
+        preco: 8.88,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 
     {
         nome: "Pudim",
         imagem: Pudim,
-        Tempo: `${gerarNumeroAleatorio(1, 20)}min`,
-        preco: `R$ ${gerarNumeroAleatorio(5, 10)}.00`,
-        nota: `${gerarNumeroAleatorio(1, 10)}`,
+        Tempo: 2,
+        preco: 3.50,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    },
+
+    {
+        nome: "Croiassant",
+        imagem: Croiassant,
+        Tempo: 1,
+        preco: 4,
+        nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
 

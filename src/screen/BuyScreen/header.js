@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Image, View, TouchableOpacity, Dimensions,StyleSheet, Text  } from "react-native";
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 import Ficon from 'react-native-vector-icons/Feather'
 import FAicon from 'react-native-vector-icons/FontAwesome'
@@ -7,25 +8,31 @@ import FAicon from 'react-native-vector-icons/FontAwesome'
 import FoodImage from '../../../assets/Food/Pizza.png'
 import FoodImageTest from '../../../assets/Food/HamburguerCarne.png'
 
-export default function Header( {navigation} ) {
+export default function Header(  ) {
  
     [favoritado, SetFavoritado] = useState(false)
+
+    const navigation = useNavigation()
+    const route = useRoute()
     return <>
     
     <View style={styles.Header}>
         
-       <Image source={FoodImage} style={styles.FoodImage} resizeMode={'cover'} />
+       <Image source={route.params.Imagem} style={styles.FoodImage} resizeMode={'cover'} />
        <View style={styles.TextView}>
        <Text style={styles.text}>Detalhes</Text>
        </View>
        <View style={styles.info}>
-        <TouchableOpacity  onPress={() => navigation.navigate('Repositorios')}>
-        <Ficon name="chevron-left" size={50} color="#fff" />
+        <TouchableOpacity  onPress={() => {
+            navigation.goBack()
+        }
+         }>
+        <Ficon style={styles.IconLeft} name="chevron-left" size={50} color="#f2f7f2" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {
                 SetFavoritado(!favoritado)
         }}>
-       <FAicon name="heart" size={30} color={favoritado ? "#E81C23" : "#fff"} />
+       <FAicon name="heart" size={30} color={favoritado ? "#E81C23" : "#f2f7f2"} />
        </TouchableOpacity>
        </View>
     </View>
@@ -74,4 +81,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
    },
+
+   IconLeft: {
+    elevation: 2,
+   }
 })

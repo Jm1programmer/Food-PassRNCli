@@ -1,13 +1,17 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity, Alert } from "react-native";
 import Ficon from 'react-native-vector-icons/AntDesign'
 
 export default function Menu({nome, imagem, preco, desc,  Tempo, nota,  }) {
         const [ selecionado, setSelecionado] = useState(false);
+
+        const navigation = useNavigation()
+        const Preco = preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
         return <>
         
         <TouchableOpacity style={styles.cartao} onPress={() => {
-              
+              navigation.navigate('Buy', {nome: nome, Imagem: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
         }}>
                 <Image style={styles.imagem} source={imagem} accessibilityLabel={nome} />
                 <View style={styles.info}>
@@ -18,14 +22,14 @@ export default function Menu({nome, imagem, preco, desc,  Tempo, nota,  }) {
 
                 <View style={styles.Info} >
                     
-                <Text style={styles.Tempo}> { Tempo }</Text>
+                <Text style={styles.Tempo}> { `${Tempo} min` }</Text>
                  <View style={styles.nota}>
                  <Ficon name="staro" size={20} color="#000" />
                     <Text style={styles.textNota}> { nota }</Text></View>
                 </View>
                
 
-                <Text style={styles.preco}> { preco }</Text>
+                <Text style={styles.preco}> { Preco }</Text>
                
                 <View style={styles.AddFood} >  
                 <Ficon name="plus" size={18} color="#fff" />

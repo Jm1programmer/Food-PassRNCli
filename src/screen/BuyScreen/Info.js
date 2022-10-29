@@ -3,16 +3,23 @@ import { Text, View, StyleSheet, TouchableOpacity, ScrollView } from "react-nati
 import Ficon from 'react-native-vector-icons/Feather'
 import FAicon from 'react-native-vector-icons/FontAwesome'
 import Aicon from 'react-native-vector-icons/AntDesign'
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 
 export default function Info() {
     [quantidade, setQuantidade] = useState(1)
-    const price = (quantidade * 5)
+
+    const navigation = useNavigation()
+
+    const route = useRoute()
+    const priceOld = Number(quantidade * route.params.preco)
+    const price = priceOld.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    const Tempo = Number(route.params.Tempo * quantidade)
     return <>
     <View style={styles.Info}>
       <ScrollView>
        <View style={styles.NameAndQuantidy}>
-            	<Text style={styles.FoodName}>Pizza de Carne</Text>
+            	<Text style={styles.FoodName}>{route.params.nome}</Text>
 
                 <View style={styles.quantidy}>
                     <TouchableOpacity style={styles.buttonQuantidy} onPress={() => {
@@ -40,11 +47,11 @@ export default function Info() {
 
        </View>
 
-       <Text style={styles.Price}>{`R$ 5.00`} </Text>
+       <Text style={styles.Price}>{ price}</Text>
 
        <View style={styles.SobreView}>
         <Text style={styles.sobreText}>Sobre</Text>
-        <Text style={styles.sobreDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adelit.</Text>
+        <Text style={styles.sobreDesc}>{route.params.desc}</Text>
        </View>
 
             <View style={styles.DeliveryTime}>
@@ -53,16 +60,18 @@ export default function Info() {
                 </View>
                 <View style={styles.DeliveryTexts}>
                     <Text style={styles.DeliveryTitle}>Tempo de Entrega</Text>
-                    <Text style={styles.DeliveryNumber}>{`${(2 * quantidade)} minutos`}</Text>
+                    <Text style={styles.DeliveryNumber}>{`${Tempo} minutos`}</Text>
                 </View>
             </View>
             </ScrollView>
             
             <View style={styles.BuySection}>
 
-            <TouchableOpacity style={styles.buyButton}>
+            <TouchableOpacity style={styles.buyButton} onPress={() => {
+                navigation.navigate("buyConfirm")
+            }}>
                     <Text style={styles.buttonQuanty}>{`${quantidade} items`}</Text>
-                    <Text style={styles.buttonPrice}><Text>R$</Text><Text style={styles.ButtonNumberPrice}>{` ${(price)}`}</Text> <Text>.00</Text></Text>
+                    <Text style={styles.buttonPrice}><Text style={styles.ButtonNumberPrice}>{` ${(price)}`}</Text></Text>
             </TouchableOpacity>
             </View>
         

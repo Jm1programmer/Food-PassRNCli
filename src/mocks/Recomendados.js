@@ -1,7 +1,13 @@
 
-import Brownie from "../../assets/Food/BrownieRecomendados.png"
-import Pizza from "../../assets/Food/PizzaRecomendados.png"
-import Croissaint from "../../assets/Food/croissant.png"
+import BrownieHome from "../../assets/Food/BrownieRecomendados.png"
+import PizzaHome from "../../assets/Food/PizzaRecomendados.png"
+import BoloHome from "../../assets/Food/BoloRecomendados.png"
+
+import Bolo from '../../assets/Food/Bolo.png'
+import Brownie from '../../assets/Food/Brownie.png'
+
+import Pizza from '../../assets/Food/Pizza.png'
+import Croiassant from '../../assets/Food/croissantBuy.png'
 const gerarNumeroAleatorio = (min,max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -12,8 +18,9 @@ const Recomendados = {
         
         nome: "Brownie Chocolate",
         imagem: Brownie,
-        Tempo: `${gerarNumeroAleatorio(1, 5)}min`,
-        preco: `R$ 3.00`,
+        imagemHome: BrownieHome,
+        Tempo: 1,
+        preco:  3.00,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: '2 fatias de mussarela, 2 pães para hambúrguer, Maionese, 2 rodelas de tomate e 2 folhas de alface',
 
@@ -23,8 +30,9 @@ const Recomendados = {
         
         nome: "Pizza",
         imagem: Pizza,
-        Tempo: `${gerarNumeroAleatorio(1, 5)}min`,
-        preco: `R$ 5.00`,
+        imagemHome: PizzaHome,
+        Tempo: 2,
+        preco:  5.00,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: '2 fatias de mussarela, 2 pães para hambúrguer, Maionese, 2 rodelas de tomate e 2 folhas de alface',
 
@@ -32,10 +40,11 @@ const Recomendados = {
 
     {
         
-        nome: "Croissaint",
-        imagem: Croissaint,
-        Tempo: `${gerarNumeroAleatorio(1, 5)}min`,
-        preco: `R$ 4.00`,
+        nome: "Bolo Fatia",
+        imagem: Bolo,
+        imagemHome: BoloHome,
+        Tempo: 1,
+        preco: 8.99,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
         desc: '2 fatias de mussarela, 2 pães para hambúrguer, Maionese, 2 rodelas de tomate e 2 folhas de alface',
 
