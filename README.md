@@ -1,6 +1,6 @@
 FoodPass
 > <h2> ℹ️ What is InterFood? </h2>
-<h4>With a lot of effort and dedication made by this group , we managed to create an application that will destroy all queues during the school break! This is an incredible project that could make life easier not only for this school,but of all schools in Brazil in a few years. Our mission is to make life easier for all students, giving them time to relax during the break </h4>
+With a lot of effort and dedication made by this group , we managed to create an application that will destroy all queues during the school break! This is an incredible project that could make life easier not only for this school,but of all schools in Brazil in a few years. Our mission is to make life easier for all students, giving them time to relax during the break 
 <div style="display: flex"  align='center'>
 
 
