@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View, StyleSheet, TextInput, Dimensions, TouchableOpacity } from "react-native";
 import Ficon from 'react-native-vector-icons/Feather'
@@ -9,13 +10,17 @@ function search(s) {
 
 
 export default function Info() {
+    const navigation = useNavigation()
     return <>
+    
    <View style={styles.TextThingView}>
     <Text style={styles.TextThing}>O que você precisa para o </Text> 
     <Text style={[styles.TextThing, styles.TextThingColor]} >Lanche?</Text>
     </View>
 
-    <TouchableOpacity style={styles.Input}>
+    <TouchableOpacity onPress={() => {
+    navigation.navigate('Search')
+    }} style={styles.Input}>
     <Ficon name="search" size={25} color="#E81C23" />
    
         <TextInput style={styles.InputText}        

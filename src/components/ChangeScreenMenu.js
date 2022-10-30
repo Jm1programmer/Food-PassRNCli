@@ -20,11 +20,17 @@ export default function ScreenMenu() {
           <Aicon style={styles.Icon} name="search1" size={30} color="#E81C23" />
    </TouchableOpacity>
 
-   <TouchableOpacity>
+   <TouchableOpacity onPress={() => {
+       navigation.navigate('ShoppingCart')
+    
+   }}>
          <Aicon style={styles.Icon} name="shoppingcart" size={30} color="#E81C23" />
    </TouchableOpacity>
 
-   <TouchableOpacity>
+   <TouchableOpacity onPress={() => {
+    navigation.navigate('Profile')
+   
+   }}>
        <Ficon style={styles.Icon} name="user-circle-o" size={30} color="#E81C23" />
    </TouchableOpacity>
 

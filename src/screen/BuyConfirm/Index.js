@@ -4,7 +4,11 @@ import { Text, View, StyleSheet } from "react-native";
 import Aicon from 'react-native-vector-icons/AntDesign'
 import ScreenMenu from "../../components/ChangeScreenMenu";
 export default function BuyConfirmScreen() {
-  [Posicao, SetPosicao] = useState(2)
+  
+  const gerarNumeroAleatorio = (min,max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+[Posicao, SetPosicao] = useState(gerarNumeroAleatorio(2,5))
  
   const navigation = useNavigation()
     setTimeout(() => {

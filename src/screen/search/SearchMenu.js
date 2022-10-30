@@ -7,7 +7,7 @@ import FoodFlatlist from "../../components/FoodFlatlist";
 
 export default function SearchMenu() {
 
-    [oText, SetoText] = useState('abv')
+
 
 
    
@@ -21,8 +21,7 @@ export default function SearchMenu() {
         <TextInput style={styles.InputText}        
         placeholder="Pesquise sua comida favorita..."
         selectionColor={'#909090'} 
-        value={oText}
-        onChangeText={SetoText}
+     
         />
     </TouchableOpacity>
         

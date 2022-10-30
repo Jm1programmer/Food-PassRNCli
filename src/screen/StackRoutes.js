@@ -8,7 +8,8 @@ import HomeScreen from "./home/HomeApp";
 import BuyScreen from "./BuyScreen";
 import BuyConfirmScreen from "./BuyConfirm/Index";
 import SearchScreen from "./search/SearchApp";
-
+import ShoppingCartScreen from "./ShoppingCart";
+import ProfileScreen from "./UserProfile";
 
 export default function StackRoutes() {
     return <>
@@ -24,6 +25,8 @@ export default function StackRoutes() {
         <Stack.Screen name="Buy" component={BuyScreen}  />
         <Stack.Screen name="buyConfirm" component={BuyConfirmScreen}  />
         <Stack.Screen name="Search" component={SearchScreen}  />
+        <Stack.Screen name="ShoppingCart" component={ShoppingCartScreen}  />
+        <Stack.Screen name="Profile" component={ProfileScreen}  />
         
       </Stack.Navigator>
       
