@@ -3,7 +3,7 @@ FoodPass
 <div style="display: flex">
 
 
-<img src="https://media.discordapp.net/attachments/955093666807054386/1036038770123878441/198854008-f03dfb9d-f105-4829-a21b-1aae9796a003.gif" alt="App">
+<img height= '600em' src="https://media.discordapp.net/attachments/955093666807054386/1036038770123878441/198854008-f03dfb9d-f105-4829-a21b-1aae9796a003.gif" alt="App">
 
 
 
