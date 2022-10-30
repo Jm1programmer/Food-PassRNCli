@@ -27,7 +27,7 @@ Download and install the project
 # Clone this repository
 $ git clone https://github.com/Jm1programmer/Food-PassRNCli.git
 # Go to the repository
-$ cd FOODPASS
+$ cd Food-PassRNCli
 # install the dependencies
 $ npm install
 ```
