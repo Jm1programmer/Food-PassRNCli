@@ -33,14 +33,14 @@ With a lot of effort and dedication made by this group , we managed to create an
   
   <p align="center"> 
   <a href="https://discord.gg/BUuSDv7V">
-    <img src="https://img.shields.io/discord/1037098420873216081?color=%237289DA&label=InterFood&logo=discord&logoColor=white" >
+    <img src="https://img.shields.io/discord/1037098420873216081?color=%237289DA&label=InterFood&logo=discord&logoColor=white" ></a>
      <img src="https://img.shields.io/badge/progress-30%25-red" >
        <img src="https://img.shields.io/github/commit-activity/m/Jm1programmer/Food-PassRNCli?color=informational&logo=Android" >
        <img src="https://img.shields.io/github/last-commit/Jm1programmer/Food-PassRNCli?color=blueviolet&logo=React" >
       <img src="https://img.shields.io/github/stars/Jm1programmer/Food-PassRNCli?style=social" >
  
     
-  </a>
+  
 </p>
 
 <h1 align="center" >
