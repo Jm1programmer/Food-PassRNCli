@@ -53,7 +53,7 @@ With a lot of effort and dedication made by this group , we managed to create an
 </div>
 
 <h2>🚀 technologies </h2>
-<h4>This project was made with these technologies <h4>
+<h4>This project is being made with these technologies <h4>
 <ul>
 <li> React Native Cli </li>
 </ul>
