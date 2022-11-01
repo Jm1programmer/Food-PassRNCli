@@ -88,8 +88,10 @@ npx react-native run-android
 ```
 
 <h2>🫵 Contributing </h2>
+  This is my school project, which I used to study React Native, so send me an email or a discord message if you like it... It will make me very happy!
+  <br>
 <ul>
-<li> 🐞 Finding Bugs </li>
+<li> 🐞 Find and report bugs </li>
 <li> 🌟 Star the project </li>
 </ul>
  
