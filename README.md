@@ -2,10 +2,9 @@
 
 
 <h1 align="center" >
-  <br>
+
   <img src="https://media.discordapp.net/attachments/955093666807054386/1037093558877966416/image.png" alt="FoodPass"  height="125" width="125" >
-  <br>
-  <img src="https://media.discordapp.net/attachments/955093666807054386/1037092458682667069/Sem_titulo.png" alt="FoodPass" width='300'>
+
 </h1>
 <br>
 
