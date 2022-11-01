@@ -34,6 +34,8 @@ With a lot of effort and dedication made by this group , we managed to create an
   <p align="center"> 
   <a href="https://discord.gg/BUuSDv7V">
     <img src="https://img.shields.io/discord/1037098420873216081?color=%237289DA&label=InterFood&logo=discord&logoColor=white" >
+     <img src="https://img.shields.io/badge/progress-10%25-red" >
+    
   </a>
 </p>
 
