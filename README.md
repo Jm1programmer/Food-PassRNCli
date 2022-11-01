@@ -7,7 +7,9 @@
   <br>
    INTER FOOD 
 </h1>
-<br>
+
+  <p align='center'> "Simple, Fast and Delicious" </p>
+
 
 
  ### ℹ️ What is InterFood? 
