@@ -1,5 +1,16 @@
-FoodPass
-> <h2> ℹ️ What is InterFood? </h2>
+
+
+
+<h1 align="center" >
+  <br>
+  <img src="https://media.discordapp.net/attachments/955093666807054386/1037093558877966416/image.png" alt="FoodPass"  height="125" width="125" >
+  <br>
+  <img src="https://media.discordapp.net/attachments/955093666807054386/1037092458682667069/Sem_titulo.png" alt="FoodPass" width='300'>
+</h1>
+<br>
+
+
+> <h3> ℹ️ What is InterFood? </h3>
 With a lot of effort and dedication made by this group , we managed to create an application that will destroy all queues during the school break! This is an incredible project that could make life easier not only for this school,but of all schools in Brazil in a few years. Our mission is to make life easier for all students, giving them time to relax during the break 
 <div style="display: flex"  align='center'>
 
