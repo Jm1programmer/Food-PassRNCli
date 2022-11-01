@@ -4,15 +4,22 @@
 <h1 align="center" >
 
   <img src="https://media.discordapp.net/attachments/955093666807054386/1037093558877966416/image.png" alt="FoodPass"  height="125" width="125" >
-
+  <br>
+   INTER FOOD 
 </h1>
 <br>
 
 
-> <h3> ℹ️ What is InterFood? </h3>
-With a lot of effort and dedication made by this group , we managed to create an application that will destroy all queues during the school break! This is an incredible project that could make life easier not only for this school,but of all schools in Brazil in a few years. Our mission is to make life easier for all students, giving them time to relax during the break 
+ ### ℹ️ What is InterFood? 
+With a lot of effort and dedication made by this group , we managed to create an application that will destroy all queues during the school break! This is an incredible project that could make life easier not only for this school,but of all schools in Brazil in a few years. Our mission is to make life easier for all students, giving them time to relax during the break
 <div style="display: flex"  align='center'>
 
+  
+  <p align="center"> 
+  <a href="https://discord.gg/BUuSDv7V">
+    <img src="https://img.shields.io/discord/1037098420873216081?color=%237289DA&label=InterFood&logo=discord&logoColor=white" >
+  </a>
+</p>
 
 <img height= '700em' src="https://media.discordapp.net/attachments/955093666807054386/1036038770123878441/198854008-f03dfb9d-f105-4829-a21b-1aae9796a003.gif" alt="App">
 
