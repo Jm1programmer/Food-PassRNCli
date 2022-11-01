@@ -11,7 +11,21 @@
 
 
  ### ℹ️ What is InterFood? 
-With a lot of effort and dedication made by this group , we managed to create an application that will destroy all queues during the school break! This is an incredible project that could make life easier not only for this school,but of all schools in Brazil in a few years. Our mission is to make life easier for all students, giving them time to relax during the break
+ <ul>
+ <li>
+With a lot of effort and dedication made by this group , we managed to create an application that will destroy all queues during the school break! This is an incredible project that could make life easier not only for this school,but of all schools in Brazil in a few years. Our mission is to make life easier for all students, giving them time to relax during the break 
+</li>
+<li>
+  <p > 
+  Check our
+  <a href="https://github.com/users/Jm1programmer/projects/2">
+    board
+  </a>
+  to see what we are doing...
+</p>
+
+</li>
+</ul>
 <div style="display: flex"  align='center'>
 
   
@@ -21,7 +35,15 @@ With a lot of effort and dedication made by this group , we managed to create an
   </a>
 </p>
 
-<img height= '700em' src="https://media.discordapp.net/attachments/955093666807054386/1036038770123878441/198854008-f03dfb9d-f105-4829-a21b-1aae9796a003.gif" alt="App">
+<h1 align="center" >
+ <img src="https://user-images.githubusercontent.com/89549484/199341964-9085467d-534f-42ee-b41c-51e6b3bab9b7.gif" alt="FoodPass"  height="445"  >
+ <img src="https://user-images.githubusercontent.com/89549484/199341973-20755377-7bd3-4aa9-bee6-2ad432a286c8.gif" alt="FoodPass"  height="445"  >
+ <img src="https://user-images.githubusercontent.com/89549484/199341981-dadff380-5c46-4b34-adce-8d43692e39e2.gif" alt="FoodPass"  height="445" >
+
+
+  
+</h1>
+<br>
 
 
 
