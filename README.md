@@ -76,7 +76,7 @@ Firebase
 </ul>
 <br>
 <h2> ℹ️ How to use </h2>
-<h4>To copy and run this application, you need three prerequisites: Git, Node.js and yarn installed on your computer. <h4>
+<h4>To copy and run this application, you need three prerequisites: Git, Node.js + Yarn installed on your computer. <h4>
 
 <h4>In the terminal, type the following commands: </h4>
 Download and install the project
