@@ -94,9 +94,9 @@ $ npm install
 Run Mobile
 
 ```bash
-//Metro
+# Metro
 npm start
-//Run Android
+# Run Android
 npx react-native run-android
 ```
 
