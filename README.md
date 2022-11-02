@@ -95,9 +95,9 @@ Run Mobile
 
 ```bash
 # Metro
-npm start
+$ npm start
 # Run Android
-npx react-native run-android
+$ npx react-native run-android
 ```
 
 <h2>🫵 Contributing </h2>
