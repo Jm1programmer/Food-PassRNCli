@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         fontFamily: 'Archivo-SemiBold',
         color: '#fff',
-        width: 90,
+        
       alignSelf: 'flex-start',
         marginLeft: 20,
     },

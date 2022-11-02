@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "620877051102",
+    "project_id": "interfood-34220",
+    "storage_bucket": "interfood-34220.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620877051102:android:06cb04524b3cd1675efe4f",
+        "android_client_info": {
+          "package_name": "com.foodpass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620877051102-g0774ovqerqu6ee9b97uu913s96rjrjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-BPfNCPgu-Ig3T8_PhFQGeTjOY-pFM2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620877051102-g0774ovqerqu6ee9b97uu913s96rjrjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

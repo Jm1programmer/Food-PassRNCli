@@ -7,7 +7,7 @@ import Bolo from '../../assets/Food/Bolo.png'
 import Brownie from '../../assets/Food/Brownie.png'
 
 import Pizza from '../../assets/Food/Pizza.png'
-import Croiassant from '../../assets/Food/croissantBuy.png'
+import Croiassant from '../../assets/Food/croissant.png'
 const gerarNumeroAleatorio = (min,max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -16,7 +16,7 @@ const Recomendados = {
     
     lista : [{
         
-        nome: "Brownie Chocolate",
+        nome: "Brownie",
         imagem: Brownie,
         imagemHome: BrownieHome,
         Tempo: 1,
@@ -40,7 +40,7 @@ const Recomendados = {
 
     {
         
-        nome: "Bolo Fatia",
+        nome: "Bolo",
         imagem: Bolo,
         imagemHome: BoloHome,
         Tempo: 1,

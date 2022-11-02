@@ -1,9 +1,13 @@
-import React from "react";
-import { Text, StyleSheet, View } from "react-native";
+import React, {useState, useEffect} from "react";
+import { Text, StyleSheet, View, Image } from "react-native";
 
 import ScreenMenu from "../../components/ChangeScreenMenu";
-
+import storage from '@react-native-firebase/storage'
 export default function ShoppingCartScreen() {
+  
+    const [imageUrl, setImageUrl] = useState(undefined);
+
+   
     return <>
     <View style={styles.screen}>
         <View style={styles.Menu}>

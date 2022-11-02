@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Image, View, TouchableOpacity, Dimensions,StyleSheet, Text  } from "react-native";
 import { useNavigation, useRoute } from '@react-navigation/native';
 
@@ -7,18 +7,35 @@ import FAicon from 'react-native-vector-icons/FontAwesome'
 
 import FoodImage from '../../../assets/Food/Pizza.png'
 import FoodImageTest from '../../../assets/Food/HamburguerCarne.png'
-
+import storage from '@react-native-firebase/storage';
 export default function Header(  ) {
  
     [favoritado, SetFavoritado] = useState(false)
 
     const navigation = useNavigation()
     const route = useRoute()
+
+    const [imageUrl, setImageUrl] = useState(undefined);
+
+    useEffect( () => {
+     
+             storage()
+            .ref('/' + `${route.params.nome}.png`) //name in storage in firebase console
+            .getDownloadURL()
+            .then((url) => {
+              setImageUrl(url);
+            })
+            .catch((e) => console.log('Errors while downloading => ', e));
+        
+        
+       
+      }, []);
+
     return <>
     
     <View style={styles.Header}>
         
-       <Image source={route.params.Imagem} style={styles.FoodImage} resizeMode={'cover'} />
+       <Image source={{uri: imageUrl}}  style={styles.FoodImage} resizeMode={'cover'} />
        <View style={styles.TextView}>
        <Text style={styles.text}>Detalhes</Text>
        </View>

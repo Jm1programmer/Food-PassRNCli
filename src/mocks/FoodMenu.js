@@ -1,12 +1,4 @@
-import Bolo from '../../assets/Food/Bolo.png'
-import Brownie from '../../assets/Food/Brownie.png'
-import Coxinhas from '../../assets/Food/Coxinhas.png'
-import Esfirra from '../../assets/Food/Esfirra.png'
-import HamburguerCarne from '../../assets/Food/HamburguerCarne.png'
-import Pizza from '../../assets/Food/Pizza.png'
-import Pudim from '../../assets/Food/Pudim.png'
-import Torta from '../../assets/Food/Torta.png'
-import Croiassant from '../../assets/Food/croissantBuy.png'
+
 
 
 const gerarNumeroAleatorio = (min,max) => {
@@ -17,18 +9,18 @@ const Menu = {
     
     lista : [{
         
-        nome: "Hamburguer",
-        imagem: HamburguerCarne,
+        nome: "HamburguerCarne",
+       
         Tempo: 2,
         preco: 6,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
-        desc: '2 fatias de mussarela, 2 pães para hambúrguer, Maionese, 2 rodelas de tomate e 2 folhas de alface',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
 
     },
 
     {
         nome: "Pizza",
-        imagem: Pizza,
+    
         Tempo: 1,
         preco: 6,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
@@ -36,8 +28,8 @@ const Menu = {
     },
 
     {
-        nome: "Coxinha",
-        imagem: Coxinhas,
+        nome: "Coxinhas",
+       
         Tempo: 2,
         preco: 5,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
@@ -46,7 +38,7 @@ const Menu = {
 
     {
         nome: "Esfirra",
-        imagem: Esfirra,
+     
         Tempo: 1,
         preco: 4,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
@@ -55,7 +47,7 @@ const Menu = {
 
     {
         nome: "Brownie",
-        imagem: Brownie,
+       
         Tempo: 1,
         preco: 3,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
@@ -63,8 +55,8 @@ const Menu = {
     },
 
     {
-        nome: "Bolo Fatia",
-        imagem: Bolo,
+        nome: "Bolo",
+     
         Tempo: 0.5,
         preco: 8.99,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
@@ -73,7 +65,7 @@ const Menu = {
 
     {
         nome: "Torta",
-        imagem: Torta,
+       
         Tempo: 2,
         preco: 8.88,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
@@ -82,7 +74,7 @@ const Menu = {
 
     {
         nome: "Pudim",
-        imagem: Pudim,
+        
         Tempo: 2,
         preco: 3.50,
         nota: `${gerarNumeroAleatorio(1, 5)}`,
@@ -90,8 +82,8 @@ const Menu = {
     },
 
     {
-        nome: "Croiassant",
-        imagem: Croiassant,
+        nome: "croissant",
+       
         Tempo: 1,
         preco: 4,
         nota: `${gerarNumeroAleatorio(1, 5)}`,

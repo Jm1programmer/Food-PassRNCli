@@ -1,19 +1,32 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity, Alert } from "react-native";
 import Ficon from 'react-native-vector-icons/AntDesign'
+import storage from '@react-native-firebase/storage';
 
 export default function Menu({nome, imagem, preco, desc,  Tempo, nota,  }) {
         const [ selecionado, setSelecionado] = useState(false);
+
+        const [imageUrl, setImageUrl] = useState(undefined);
+
+        useEffect(() => {
+            storage()
+              .ref('/' + `${nome}.png`) //name in storage in firebase console
+              .getDownloadURL()
+              .then((url) => {
+                setImageUrl(url);
+              })
+              .catch((e) => console.log('Errors while downloading => ', e));
+          }, []);
 
         const navigation = useNavigation()
         const Preco = preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
         return <>
         
         <TouchableOpacity style={styles.cartao} onPress={() => {
-              navigation.navigate('Buy', {nome: nome, Imagem: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
+              navigation.navigate('Buy', {nome: nome, imageUrl: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
         }}>
-                <Image style={styles.imagem} source={imagem} accessibilityLabel={nome} />
+                <Image style={styles.imagem} source={{uri: imageUrl}} accessibilityLabel={nome} />
                 <View style={styles.info}>
                 <View>
                 <Text style={styles.nome}>{ nome }</Text>
