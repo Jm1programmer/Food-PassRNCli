@@ -65,7 +65,7 @@ With a lot of effort and dedication made by this group , we managed to create an
 </ul>
 <br>
 <h2> ℹ️ How to use </h2>
-<h4>To copy and run this application, you need three prerequisites: Git and Node.js installed on your computer. <h4>
+<h4>To copy and run this application, you need three prerequisites: Git, Node.js and yarn installed on your computer. <h4>
 
 <h4>In the terminal, type the following commands: </h4>
 Download and install the project
