@@ -60,12 +60,23 @@ With a lot of effort and dedication made by this group , we managed to create an
 
 <h2>🚀 technologies </h2>
 <h4>This project is being made with these technologies <h4>
-<ul>
-<li> React Native Cli </li>
+<ul  >
+<li> <p>
+<img src="https://media.discordapp.net/attachments/955093666807054386/1037499816210608188/unknown.png" alt="FoodPass"  height="20"  >
+React Native Cli
+<p> 
+</li>
+
+<li > <p>
+<img src="https://media.discordapp.net/attachments/955093666807054386/1037499756911534190/unknown.png" alt="FoodPass"  height="30"  >
+Firebase
+<p> 
+</li>
+
 </ul>
 <br>
 <h2> ℹ️ How to use </h2>
-<h4>To copy and run this application, you need three prerequisites: Git, Node.js and yarn installed on your computer. <h4>
+<h4>To copy and run this application, you need three prerequisites: Git, Node.js + Yarn installed on your computer. <h4>
 
 <h4>In the terminal, type the following commands: </h4>
 Download and install the project
@@ -83,8 +94,10 @@ $ npm install
 Run Mobile
 
 ```bash
-npm start
-npx react-native run-android
+# Metro
+$ npm start
+# Run Android
+$ npx react-native run-android
 ```
 
 <h2>🫵 Contributing </h2>
