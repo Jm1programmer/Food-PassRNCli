@@ -1,59 +1,34 @@
-
 import React, {useState, useEffect} from "react";
 import { Text, StyleSheet, View, Image, FlatList, TouchableOpacity, Alert, Button } from "react-native";
-import RedGradient from "../../../assets/BackgroundGradients/RedGradient.png"
-import { CarregaRecomendados } from "../../services/RecomendadosDados";
+import RedGradient from "../../../../assets/BackgroundGradients/RedGradient.png"
+
 import { useNavigation } from '@react-navigation/native';
 
-import RecomendadosFlatList from "../../components/RecomendadosFlatlist";
-
-import BuyScreen from "../BuyScreen";
-
-export default function Recomendados( ) {
-const [lista, setLista] = useState([]);
 
 
- 
-    useEffect(() => {
-        const retorno = CarregaRecomendados();
-       
-        
-       setLista(retorno.lista);
-    }, []);
-
-    return <>
-    <View style={styles.Recomendados}>
-        <Text style={styles.title}>Recomendados</Text>
-
-        <RecomendadosFlatList />
-       
-    </View>
-    </>
-}
-
- function Carts({nome, imagemHome, preco, desc,  Tempo, nota, imagem }) {
+export default function Carts({nome, imagemHome, preco, desc,  Tempo, nota, imagem }) {
     const navigation = useNavigation()
     const Preco = preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    const [imageUrl, setImageUrl] = useState(undefined);
+
+        useEffect(() => {
+            setImageUrl( imagem)
+          }, []);
     return <>
 <TouchableOpacity onPress={() => {
-    navigation.navigate('Buy', {nome: nome, Imagem: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
+     navigation.navigate('Buy', {nome: nome, imagem: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
  } }>
         <View style={styles.cart}>
         <Image style={styles.background} source={RedGradient} />
         <Text style={styles.foodName}>{nome}</Text>
         
-        <Image style={styles.food} source={imagemHome} resizeMode={'contain'} />
+        <Image style={styles.food} source={{uri: imageUrl}} resizeMode={'cover'} />
         <Text style={styles.Money}>{`${Preco}`}</Text>
     
     </View>
 </TouchableOpacity>
 </>
- }
-
- 
-
-
-
+}
 
 const styles = StyleSheet.create({
     FlatList: {
@@ -70,7 +45,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Archivo-SemiBold',
         marginBottom: 10,
        
-    },
+    },  
 
     background: {
         position: 'absolute',
@@ -108,6 +83,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         lineHeight: 22,
         marginTop: 10,
+        marginBottom: 10,
         fontFamily: 'Archivo-SemiBold',
         color: '#fff',
         
@@ -118,6 +94,8 @@ const styles = StyleSheet.create({
     food: {
         width: 120,
         height: 120,
+        borderRadius: 90,
+        
     },
 
 

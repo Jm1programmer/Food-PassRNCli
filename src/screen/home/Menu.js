@@ -10,13 +10,7 @@ export default function Menu({nome, imagem, preco, desc,  Tempo, nota,  }) {
         const [imageUrl, setImageUrl] = useState(undefined);
 
         useEffect(() => {
-            storage()
-              .ref('/' + `${nome}.png`) //name in storage in firebase console
-              .getDownloadURL()
-              .then((url) => {
-                setImageUrl(url);
-              })
-              .catch((e) => console.log('Errors while downloading => ', e));
+            setImageUrl( imagem)
           }, []);
 
         const navigation = useNavigation()
@@ -24,7 +18,7 @@ export default function Menu({nome, imagem, preco, desc,  Tempo, nota,  }) {
         return <>
         
         <TouchableOpacity style={styles.cartao} onPress={() => {
-              navigation.navigate('Buy', {nome: nome, imageUrl: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
+              navigation.navigate('Buy', {nome: nome, imagem: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
         }}>
                 <Image style={styles.imagem} source={{uri: imageUrl}} accessibilityLabel={nome} />
                 <View style={styles.info}>

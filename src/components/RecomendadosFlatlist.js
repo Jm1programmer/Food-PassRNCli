@@ -2,25 +2,23 @@
 
 import React, {useEffect, useState } from "react";
 import { FlatList, Text, StyleSheet, Dimensions} from "react-native";
-import Menu from "../screen/home/Menu";
-import { CarregaMenu } from "../services/CarregaDados";
+import Carts from "../screen/home/recomendados/cart";
 
-import Header from "../screen/home/header";
-import Info from "../screen/home/Info";
-import Categories from "../screen/home/categories";
-import Recomendados from "../screen/home/recomendados";
+
 
 import firestore from '@react-native-firebase/firestore';
 
 
 
-export default function FoodFlatlist({ Topo}) {
+export default function RecomendadosFlatList() {
   
     const [lista, setLista] = useState([]);
         const getFood = async() => {
-            await firestore()
+           await firestore()
             .collection('foods')
-            
+            .limit(4)
+            .where('nota', '>=', 1)
+            .orderBy(`nota`)
             .get()
             .then(querySnapshot => {
              let doc = [];
@@ -49,9 +47,9 @@ export default function FoodFlatlist({ Topo}) {
 return <>
         <FlatList 
         data={lista}
-        renderItem={({ item }) =>  <Menu  {...item}  />  }
+        renderItem={({ item }) =>  <Carts  {...item}  />  }
         keyExtractor={({nome}) => nome}
-        ListHeaderComponent={Topo}
+        horizontal={true}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
         
@@ -61,3 +59,41 @@ return <>
 
 
 const height = Dimensions.get('screen').height
+const styles = StyleSheet.create({
+    title: {
+        fontSize: 20,
+        color: "#000",
+        fontFamily: 'Archivo-SemiBold',
+        marginLeft: 10,
+        marginTop: 10,
+        marginBottom: 10,
+    },
+
+    Input: {
+    
+        width: '95%',
+        flexDirection: 'row',
+        height: height / 15,
+        backgroundColor: '#fff',
+        marginTop: 30,
+        marginVertical: 5,
+        alignItems: 'center',
+       justifyContent: 'space-between',
+       
+       borderRadius: 15,
+        paddingHorizontal: 25,
+        alignSelf:'center',
+        elevation: 6,
+    },
+
+    InputText: {
+        
+        fontSize: 15,
+        color: '#000',
+       width: '90%',
+       fontFamily: 'Archivo-Regular',
+     
+    },
+
+  
+})

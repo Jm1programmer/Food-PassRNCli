@@ -66,7 +66,10 @@ export default function Info() {
             </View>
             </ScrollView>
             
-            <View style={styles.BuySection}>
+            
+    </View>
+
+    <View style={styles.BuySection}>
 
             <TouchableOpacity style={styles.buyButton} onPress={() => {
                 navigation.navigate("buyConfirm")
@@ -77,7 +80,6 @@ export default function Info() {
             </TouchableOpacity>
             </View>
         
-    </View>
    
     
     </>
@@ -195,7 +197,7 @@ const styles = StyleSheet.create({
 
     BuySection: {
         justifyContent: 'flex-end',
-        
+        alignItems: 'center',
         height: 120,
         
     },

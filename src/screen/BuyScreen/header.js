@@ -18,16 +18,8 @@ export default function Header(  ) {
     const [imageUrl, setImageUrl] = useState(undefined);
 
     useEffect( () => {
-     
-             storage()
-            .ref('/' + `${route.params.nome}.png`) //name in storage in firebase console
-            .getDownloadURL()
-            .then((url) => {
-              setImageUrl(url);
-            })
-            .catch((e) => console.log('Errors while downloading => ', e));
-        
-        
+
+      setImageUrl(route.params.imagem)
        
       }, []);
 
@@ -35,12 +27,12 @@ export default function Header(  ) {
     
     <View style={styles.Header}>
         
-       <Image source={{uri: imageUrl}}  style={styles.FoodImage} resizeMode={'cover'} />
+       <Image source={{uri: imageUrl}} style={styles.FoodImage} resizeMode={'cover'} />
        <View style={styles.TextView}>
        <Text style={styles.text}>Detalhes</Text>
        </View>
        <View style={styles.info}>
-        <TouchableOpacity  onPress={() => {
+        <TouchableOpacity style={styles.goback}  onPress={() => {
             navigation.goBack()
         }
          }>
@@ -101,5 +93,15 @@ const styles = StyleSheet.create({
 
    IconLeft: {
     elevation: 2,
+   },
+
+   goback: {
+    width: 50,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    borderRadius: 90,
+    
    }
 })

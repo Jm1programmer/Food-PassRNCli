@@ -1332,6 +1332,11 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/firestore@^16.4.1":
+  version "16.4.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-16.4.1.tgz#6fcf4a87edfb730b4bbce1c4a2d1b5d39fcc6dd9"
+  integrity sha512-va12bIhMnv/r6SsV+ZS8uQThfXqBicTYlb1fiUhUAvLkO59mcRM3i+dRrWApxLusFg3sO+dgeNaVV428Ny6u3Q==
+
 "@react-native-firebase/storage@^16.4.1":
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/storage/-/storage-16.4.1.tgz#b6f174b7149dd35c354ee25e49b1f3e621990c49"
