@@ -14,12 +14,7 @@ const [lista, setLista] = useState([]);
 
 
  
-    useEffect(() => {
-        const retorno = CarregaRecomendados();
-       
-        
-       setLista(retorno.lista);
-    }, []);
+  
 
     return <>
     <View style={styles.Recomendados}>
@@ -31,24 +26,7 @@ const [lista, setLista] = useState([]);
     </>
 }
 
- function Carts({nome, imagemHome, preco, desc,  Tempo, nota, imagem }) {
-    const navigation = useNavigation()
-    const Preco = preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
-    return <>
-<TouchableOpacity onPress={() => {
-    navigation.navigate('Buy', {nome: nome, Imagem: imagem, preco: preco, desc: desc, Tempo: Tempo, nota: nota,})
- } }>
-        <View style={styles.cart}>
-        <Image style={styles.background} source={RedGradient} />
-        <Text style={styles.foodName}>{nome}</Text>
-        
-        <Image style={styles.food} source={imagemHome} resizeMode={'contain'} />
-        <Text style={styles.Money}>{`${Preco}`}</Text>
-    
-    </View>
-</TouchableOpacity>
-</>
- }
+ 
 
  
 

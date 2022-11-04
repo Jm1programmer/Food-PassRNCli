@@ -9,13 +9,7 @@ export default function FoodMenu({header: Header, info: Info, categories: Catego
 
     const [lista, setLista] = useState([]);
  
-    useEffect(() => {
-        const retorno = CarregaMenu();
-       
-        
-       setLista(retorno.lista);
-    }, []);
-
+ 
 
    
  

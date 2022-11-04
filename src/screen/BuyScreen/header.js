@@ -5,9 +5,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import Ficon from 'react-native-vector-icons/Feather'
 import FAicon from 'react-native-vector-icons/FontAwesome'
 
-import FoodImage from '../../../assets/Food/Pizza.png'
-import FoodImageTest from '../../../assets/Food/HamburguerCarne.png'
-import storage from '@react-native-firebase/storage';
+
 export default function Header(  ) {
  
     [favoritado, SetFavoritado] = useState(false)

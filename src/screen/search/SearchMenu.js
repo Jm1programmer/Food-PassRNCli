@@ -1,31 +1,19 @@
 import React, {useEffect, useState } from "react";
 import { FlatList, Text, StyleSheet, View, TextInput, Dimensions, TouchableOpacity } from "react-native";
-import Menu from "../home/Menu";
-import { CarregaMenu } from "../../services/CarregaDados";
 import Ficon from 'react-native-vector-icons/Feather'
 import FoodFlatlist from "../../components/FoodFlatlist";
-
+import SearchComponent from "./SearchComponent";
 export default function SearchMenu() {
 
 
-
+ const [text,SetText] = useState('')
 
    
  
 
     const Topo = () => {
         return <>
-       <TouchableOpacity style={styles.Input}>
-    <Ficon name="search" size={25} color="#E81C23" />
-   
-        <TextInput style={styles.InputText}        
-        placeholder="Pesquise sua comida favorita..."
-        selectionColor={'#909090'} 
-     
-        />
-    </TouchableOpacity>
-        
-        <Text style={styles.title}>Popular</Text>
+      <SearchComponent />
        </>
     }
 

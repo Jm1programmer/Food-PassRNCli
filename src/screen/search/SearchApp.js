@@ -1,12 +1,13 @@
-import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { Text, View, StyleSheet, TextInput } from "react-native";
 import SearchMenu from "./SearchMenu";
 import ScreenMenu from "../../components/ChangeScreenMenu";
 
 export default function SearchScreen() {
+   
     return <>
     <View style={styles.screen}>
-        
+   
       <SearchMenu />
         
     </View>
