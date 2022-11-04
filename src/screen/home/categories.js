@@ -3,9 +3,7 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 import Ficon from 'react-native-vector-icons/Feather'
 
-import hamburguer from '../../../assets/Food/Hamburguer.png'
-import coxinha from '../../../assets/Food/coxinha.png'
-import orangeJuice from '../../../assets/Food/orangeJuice.png'
+
 
 import CategoriesFlatList from "../../components/CategoriesFlatList";
 
