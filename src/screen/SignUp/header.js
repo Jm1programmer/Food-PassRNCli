@@ -3,31 +3,33 @@ import { Text, Image, View, StyleSheet, TouchableOpacity } from "react-native";
 import Logo from '../../../assets/Logo.png';
 import Ficon from 'react-native-vector-icons/Feather'
 import { useNavigation } from "@react-navigation/native";
-
+import Profileheader from "./ProfileSign";
 export default function Header() {
     const navigation = useNavigation()
     return <>
 
-<TouchableOpacity style={styles.goback}  onPress={() => {
+
+
+    <View style={styles.header}>
+       <Profileheader />
+      
+        <Text style={styles.title}>Registre a conta</Text>
+        <Text style={styles.subTitle}>Varias comidas com apenas um clique!</Text>
+    </View>
+
+    <TouchableOpacity style={styles.goback}  onPress={() => {
             navigation.goBack()
         }
          }>
         <Ficon style={styles.IconLeft} name="chevron-left" size={50} color="#f2f7f2" />
         </TouchableOpacity>
-
-    <View style={styles.header}>
-        
-      
-        <Text style={styles.title}>Registre a conta</Text>
-        <Text style={styles.subTitle}>Varias comidas com apenas um clique!</Text>
-    </View>
     </>
 }
 
 const styles = StyleSheet.create({
     header: {
         alignItems: 'center',
-        marginTop: '40%'
+       
     },
 
     title: {

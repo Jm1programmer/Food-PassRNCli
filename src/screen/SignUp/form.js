@@ -1,5 +1,5 @@
 import React, {useState, useTransition} from "react";
-import { Text, Image, View, StyleSheet, TextInput, Dimensions, TouchableOpacity } from "react-native";
+import { Text, Image, View, StyleSheet, TextInput, Dimensions, TouchableOpacity, Alert } from "react-native";
 import auth from '@react-native-firebase/auth'
 import { Controller, useForm  } from "react-hook-form";
 
@@ -9,7 +9,8 @@ import * as yup from 'yup'
 
 const schema = yup.object({
    Email: yup.string().email('Email Invalido').required('Informe seu email'),
-    Password:  yup.string().min(6)
+   Name: yup.string().required('Informe seu nome'),
+    Password:  yup.string().min(6).required('Informe sua senha')
 })
 
 import Logo from '../../../assets/Logo.png';
@@ -27,15 +28,17 @@ export default function Form() {
     function handleSignIn(data) {
         auth()
   .createUserWithEmailAndPassword(data.Email, data.Password)
+
   .then((userCredential) => {
-    console.log('user', '=>', userCredential);
+    const user = userCredential.user
+    console.log('user', '=>', user);
   }).catch(error => {
     if (error.code === 'auth/email-already-in-use') {
-        console.log('That email address is already in use!');
+        Alert.alert('That email address is already in use!');
       }
   
       if (error.code === 'auth/invalid-email') {
-        console.log('That email address is invalid!');
+        Alert.alert('That email address is invalid!');
       }
   
       console.error(error);
@@ -45,6 +48,27 @@ export default function Form() {
     return <>
   
     <View style={styles.form}>
+
+
+    <Controller control={control} name="Name"
+            render={({ field: { onChange, onBlur, value}}) => (
+                <View  style={[styles.Input, {
+                    borderColor: errors.Name?  'red' : '#dbdbdb',
+                 
+                }]}>
+                <TextInput style={styles.InputText}
+                    onChangeText={onChange}
+                    onBlur={onBlur}
+                    value={value}
+                    placeholder="Nome completo"
+                    selectionColor={'#909090'}
+                    
+                />
+        
+
+            </View>
+             
+            )}/>{errors.Name && <Text style={styles.errorsText}>{errors.Name?.message}</Text>}
 
 
 

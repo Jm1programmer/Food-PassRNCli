@@ -1,8 +1,7 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 
-
-import Header from "./header";
+import Profileheader from "./Profileheader";
 import Firstinfo from "./Firstinfo";
 import Secondinfo from "./SecondInfo";
 
@@ -12,7 +11,7 @@ export default function ProfileScreen() {
     return <>
     <View style={styles.screen}>
      
-        <Header />
+        <Profileheader />
         <Firstinfo />
         <Secondinfo />
     </View>

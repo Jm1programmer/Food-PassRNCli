@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity  } from "react-native";
 import UserImg from '../../../assets/User.png'
 import Ficon from 'react-native-vector-icons/Feather'
-
+import Aicon from 'react-native-vector-icons/AntDesign'
 
 
 
@@ -21,7 +21,7 @@ export default function Header() {
     return <>
     <View style={styles.header} >
         <TouchableOpacity style={styles.menu} onPress={signOut}>
-            <Ficon name="menu" size={20} color="#E81C23" />
+            <Aicon name="logout" size={20} color="#E81C23" />
         </TouchableOpacity>
 
         <View style={styles.info}>

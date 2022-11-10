@@ -1,14 +1,17 @@
 import React from "react";
 import { Image, Text, View, StyleSheet, Dimensions } from "react-native";
-import ProfileImg from '../../../assets/Profile/ProfilePicture.png'
-import Background from '../../../assets/BackgroundGradients/RedGradient.png'
-export default function Header() {
+
+import Eicon from 'react-native-vector-icons/Entypo'
+
+export default function Profileheader() {
     return <>
     <View style={styles.Header} >
         <View style={styles.Background}></View>
         <View style={styles.perfil}>
             <View style={styles.profileImgOutline}>
-            <Image source={ProfileImg} style={styles.Profile}   resizeMode='contain' /> 
+            <View style={styles.Profile}>
+            <Eicon name='camera' size={40} color={"#000"} />
+                </View> 
             </View>
       
         </View>
@@ -60,8 +63,9 @@ const styles = StyleSheet.create({
         height: 120,
       
         borderRadius: 90,
-       
-      
+        backgroundColor: '#CDCDCD',
+      alignItems: 'center',
+      justifyContent: 'center',
       
     },
 
