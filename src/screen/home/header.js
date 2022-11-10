@@ -3,10 +3,24 @@ import { Text, View, Image, StyleSheet, TouchableOpacity  } from "react-native";
 import UserImg from '../../../assets/User.png'
 import Ficon from 'react-native-vector-icons/Feather'
 
+
+
+
+import auth from '@react-native-firebase/auth'
+
+
 export default function Header() {
+
+    
+
+    function signOut() {
+        auth().signOut()
+    }
+    
+
     return <>
     <View style={styles.header} >
-        <TouchableOpacity style={styles.menu}>
+        <TouchableOpacity style={styles.menu} onPress={signOut}>
             <Ficon name="menu" size={20} color="#E81C23" />
         </TouchableOpacity>
 
@@ -26,6 +40,8 @@ export default function Header() {
     </View>
     </>
 }
+
+
 
 const styles = StyleSheet.create({
     header: {

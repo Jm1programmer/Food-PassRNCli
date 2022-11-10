@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Text, View, StyleSheet } from "react-native";
 
 import Categories from "./categories";
@@ -11,6 +11,7 @@ import ScreenMenu from "../../components/ChangeScreenMenu";
 import { NavigationContainer } from "@react-navigation/native";
 
 export default function HomeScreen() {
+    
     return <>
     <View style={styles.screen}>
         
