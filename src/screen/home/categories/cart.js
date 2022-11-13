@@ -1,17 +1,20 @@
+import { useNavigation } from "@react-navigation/native";
 import React, {useState,useEffect} from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 
 
-export default function CartCategories({ title, image}) {
+export default function CartCategories({ title, image, categoriesImage}) {
     const [imageUrl, setImageUrl] = useState(undefined);
-
+    const navigation = useNavigation()
     useEffect(() => {
         setImageUrl(image)
       }, []);
     return <>
   
-            <TouchableOpacity style={styles.cart}>
+            <TouchableOpacity style={styles.cart} onPress={() => {
+     navigation.navigate('Categories',{imagem: categoriesImage, name: title,})
+ } }> 
                 <Image style={styles.cartImage} source={{uri: imageUrl}} resizeMode={'cover'}  />
                 <Text style={styles.cartText}>{title}</Text>
             </TouchableOpacity>

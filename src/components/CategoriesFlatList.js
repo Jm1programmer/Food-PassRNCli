@@ -16,6 +16,7 @@ export default function CategoriesFlatList() {
         const getCategories = async() => {
            await firestore()
             .collection('Categories')
+            
             .get()
             .then(querySnapshot => {
              let doc = [];
@@ -24,6 +25,7 @@ export default function CategoriesFlatList() {
                 const categories = {
                     title: documentSnapshot.get('title'),
                     image: documentSnapshot.get('image'),
+                    categoriesImage: documentSnapshot.get('categoriesImage'),
                 }
                 doc.push(categories);
               });

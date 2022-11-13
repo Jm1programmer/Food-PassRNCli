@@ -17,8 +17,9 @@ export default function HomeScreen() {
         
         <FoodMenu header={Header}  info={Info} categories={Categories} recomendados={Recomendados} />
        
-        <ScreenMenu />
+        
     </View>
+    <ScreenMenu />
    
     
     </>
@@ -27,6 +28,8 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
+        width: '100%',
+        height: '100%',
         backgroundColor: '#F1EFF1',
     }
 })

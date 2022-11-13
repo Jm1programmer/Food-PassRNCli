@@ -4,7 +4,7 @@ import React, {useEffect, useState } from "react";
 import { FlatList, Text, StyleSheet, Dimensions} from "react-native";
 import Menu from "../screen/home/Menu";
 import { CarregaMenu } from "../services/CarregaDados";
-
+import { ActivityIndicator } from "react-native";
 import Header from "../screen/home/header";
 import Info from "../screen/home/Info";
 import Categories from "../screen/home/categories";
@@ -15,11 +15,12 @@ import firestore from '@react-native-firebase/firestore';
 
 
 export default function FoodFlatlist({ Topo}) {
-  
+    const [initializing, setInitializing] = useState(true);
     const [lista, setLista] = useState([]);
         const getFood = async() => {
             await firestore()
             .collection('foods')
+            
             .orderBy('price')
             .get()
             .then(querySnapshot => {
@@ -36,6 +37,9 @@ export default function FoodFlatlist({ Topo}) {
 
                 }
                 doc.push(food);
+                if (initializing) {
+                    setInitializing(false)
+                  }
               });
             
               setLista(doc)
@@ -45,7 +49,13 @@ export default function FoodFlatlist({ Topo}) {
     useEffect(() => {
     
        getFood()
+     
     }, []);
+
+    
+  if (initializing) {
+    return <ActivityIndicator size={'large'} />;
+  }
 return <>
         <FlatList 
         data={lista}

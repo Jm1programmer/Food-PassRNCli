@@ -3,18 +3,30 @@ import React, { useState, useEffect } from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity, Alert } from "react-native";
 import Ficon from 'react-native-vector-icons/AntDesign'
 import storage from '@react-native-firebase/storage';
-
+import { ActivityIndicator } from "react-native";
 export default function Menu({nome, imagem, preco, desc,  Tempo, nota,  }) {
         const [ selecionado, setSelecionado] = useState(false);
-
+        const [initializing, setInitializing] = useState(true);
         const [imageUrl, setImageUrl] = useState(undefined);
 
         useEffect(() => {
             setImageUrl( imagem)
+            if (initializing) {
+                setInitializing(false)
+              }
           }, []);
 
         const navigation = useNavigation()
         const Preco = preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
+        if (initializing) {
+            return (
+              <View style={styles.loading}>
+               <ActivityIndicator  />
+              </View>
+             
+            )
+            }
         return <>
         
         <TouchableOpacity style={styles.cartao} onPress={() => {

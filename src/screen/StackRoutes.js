@@ -14,6 +14,8 @@ import BuyConfirmScreen from "./BuyConfirm/Index";
 import SearchScreen from "./search/SearchApp";
 import ShoppingCartScreen from "./ShoppingCart";
 import ProfileScreen from "./UserProfile";
+import CategoriesScreen from "./Categories";
+
 import { useNavigation } from "@react-navigation/native";
 import { ActivityIndicator } from "react-native";
 
@@ -64,6 +66,7 @@ export default function StackRoutes() {
         <Stack.Screen name="Search" component={SearchScreen}  />
         <Stack.Screen name="ShoppingCart" component={ShoppingCartScreen}  />
         <Stack.Screen name="Profile" component={ProfileScreen}  />
+        <Stack.Screen name="Categories" component={CategoriesScreen}  />
           </>
           // User is signed in
   

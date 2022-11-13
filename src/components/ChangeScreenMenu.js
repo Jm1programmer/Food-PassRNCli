@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 
 export default function ScreenMenu() {
     const navigation = useNavigation()
+    
     return <>
    <View style={styles.Menu}>
     <TouchableOpacity onPress={() => {
@@ -46,7 +47,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 40,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        borderRadius: 6,
     },
     Icon: {
         marginHorizontal: 10,
