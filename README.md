@@ -44,9 +44,9 @@ With a lot of effort and dedication made by this group , we managed to create an
 </p>
 
 <h1 align="center" >
-    <img src="https://firebasestorage.googleapis.com/v0/b/interfood-34220.appspot.com/o/Github%2FAndroid%20Emulator%20-%20Android_12_5554%202022-11-10%2018-03-39%20(1).gif?alt=media&token=7a7f7359-08e3-4c8c-a2e1-309b8131e6a2" alt="FoodPass"  height="445"  >
-   <img src="https://user-images.githubusercontent.com/89549484/199341981-dadff380-5c46-4b34-adce-8d43692e39e2.gif" alt="FoodPass"  height="445" >
- <img src="https://user-images.githubusercontent.com/89549484/199341973-20755377-7bd3-4aa9-bee6-2ad432a286c8.gif" alt="FoodPass"  height="445"  >
+    <img src="https://github.com/Jm1programmer/Food-PassRNCli/blob/main/src/Login.gif?raw=true" alt="FoodPass"  height="445"  >
+   <img src="https://github.com/Jm1programmer/Food-PassRNCli/blob/main/src/home%20(2).gif?raw=true" alt="FoodPass"  height="445" >
+ <img src="https://github.com/Jm1programmer/Food-PassRNCli/blob/main/src/ChangingScreens.gif?raw=true" alt="FoodPass"  height="445"  >
 
 
 
