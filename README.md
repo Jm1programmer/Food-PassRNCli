@@ -89,6 +89,7 @@ $ git clone https://github.com/Jm1programmer/Food-PassRNCli.git
 $ cd Food-PassRNCli
 # install the dependencies
 $ npm install
+$ yarn add @react-native-firebase/app
 ```
 
 
