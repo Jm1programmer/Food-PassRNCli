@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions } from "react-native";
 import Ficon from 'react-native-vector-icons/Feather'
 import FAicon from 'react-native-vector-icons/FontAwesome'
 import Aicon from 'react-native-vector-icons/AntDesign'
@@ -84,7 +84,7 @@ export default function Info() {
     
     </>
 }
-
+const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
 
     Info: {
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     BuySection: {
         justifyContent: 'flex-end',
         alignItems: 'center',
-        height: 120,
+        height: windowHeight / 7,
         
     },
 

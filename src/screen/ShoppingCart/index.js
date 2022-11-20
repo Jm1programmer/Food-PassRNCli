@@ -2,13 +2,29 @@ import React, {useState, useEffect} from "react";
 import { Text, StyleSheet, View, Image } from "react-native";
 
 import ScreenMenu from "../../components/ChangeScreenMenu";
-import storage from '@react-native-firebase/storage'
+import auth from '@react-native-firebase/auth'
+import firestore from '@react-native-firebase/firestore';
 export default function ShoppingCartScreen() {
-  
-    const [imageUrl, setImageUrl] = useState(undefined);
+    const user = auth().currentUser;
 
-   
+    firestore()
+    .collection('users')
+    .doc(user.uid)
+    .collection('favorites')
+    .doc('Hamburguer')
+    .get()
+    .then(documentSnapshot => {
+      
+      if (documentSnapshot.exists) {
+    
+        console.log(documentSnapshot.data())
+        
+       
+      }
+    });
     return <>
+
+    
     <View style={styles.screen}>
         <View style={styles.Menu}>
         <Text style={styles.MyCartText}>Minha Cesta</Text>

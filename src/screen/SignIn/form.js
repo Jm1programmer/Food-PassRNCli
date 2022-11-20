@@ -1,9 +1,10 @@
-import React, {useState, useTransition} from "react";
-import { Text, Image, View, StyleSheet, TextInput, Dimensions, TouchableOpacity } from "react-native";
+import React, {useState, useEffect} from "react";
+import { Text, Image, View, StyleSheet, TextInput, Dimensions, TouchableOpacity, Button } from "react-native";
 import auth from '@react-native-firebase/auth'
 import { Controller, useForm  } from "react-hook-form";
+import { ActivityIndicator } from "react-native";
 
-
+import Ficon from 'react-native-vector-icons/Feather'
 import { yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
@@ -19,13 +20,63 @@ export default function Form() {
 
     const navigation = useNavigation()
     const [HideText, sethideText] = useState(false)
+    const [buttonAction, setButtonAction] = useState('Normal')
     const { control, handleSubmit, formState: {errors}} = useForm({
             resolver: yupResolver(schema)
     })
 
     function handleSignIn(data) {
-        auth().signInWithEmailAndPassword(data.Email, data.Password).then(() => console.log('usurio Logado!')).catch(error => console.log(error))
+        auth().signInWithEmailAndPassword(
+            data.Email, 
+            data.Password
+            )
+            .then(() => {
+                setButtonAction('Loading') 
+            })
+            .catch((error) =>{ 
+                console.log(error)
+                setButtonAction('Error') 
+            })
     }
+
+    function Button(){
+        if (buttonAction == 'Normal') {
+        return <>
+        <TouchableOpacity style={styles.button} onPress={handleSubmit(handleSignIn)}>
+        <View>
+        <Text style={styles.TextButton}>Login</Text>
+            
+        </View>
+           
+       </TouchableOpacity>
+
+    
+       </>
+        } else if (buttonAction == 'Loading') {
+
+       return <>
+          <View style={styles.button} onPress={handleSubmit(handleSignIn)}>
+        <View>
+        <ActivityIndicator size={'large'} color={'#fff'} />
+        </View>
+           
+       </View>
+       </>
+        } else if (buttonAction === 'Error') {
+            return <>
+            <TouchableOpacity style={styles.button} onPress={handleSubmit(handleSignIn)}>
+                <View>
+                <Ficon style={styles.IconLeft} name="x-circle" size={35} color="#f2f7f2" />
+                </View>
+           
+       </TouchableOpacity>
+             
+            </>
+        }
+        
+    }
+
+   
     return <>
   
     <View style={styles.form}>
@@ -35,9 +86,10 @@ export default function Form() {
 
     <Controller control={control} name="Email"
             render={({ field: { onChange, onBlur, value}}) => (
+                
                 <View  style={[styles.Input, {
                     borderColor: errors.Email?  'red' : '#dbdbdb',
-                 
+                    
                 }]}>
                 <TextInput style={styles.InputText}
                     onChangeText={onChange}
@@ -51,7 +103,9 @@ export default function Form() {
 
             </View>
              
-            )}/>{errors.Email && <Text style={styles.errorsText}>{errors.Email?.message}</Text>}
+            )}/>{errors.Email && <Text style={styles.errorsText}>{errors.Email?.message}</Text>   } 
+            
+            
 
 
 <Controller control={control} name="Password"
@@ -76,14 +130,7 @@ export default function Form() {
              
             )}/>{errors.Password && <Text style={styles.errorsText}>{errors.Password?.message}</Text>}
 
-
-        
-
-       
-  
-       <TouchableOpacity style={styles.button} onPress={handleSubmit(handleSignIn)}>
-            <Text style={styles.TextButton}>Login</Text>
-       </TouchableOpacity>
+        <Button />
 
        <TouchableOpacity style={styles.Register}  onPress={() => {
           navigation.navigate('SignUp')
@@ -92,9 +139,11 @@ export default function Form() {
        </TouchableOpacity>
     
     </View>
-
+       
     
     </>
+
+    
 }
 const height = Dimensions.get('window').height;
 

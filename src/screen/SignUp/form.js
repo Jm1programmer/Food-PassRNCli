@@ -1,7 +1,9 @@
 import React, {useState, useTransition} from "react";
 import { Text, Image, View, StyleSheet, TextInput, Dimensions, TouchableOpacity, Alert } from "react-native";
 import auth from '@react-native-firebase/auth'
+
 import { Controller, useForm  } from "react-hook-form";
+import firestore from '@react-native-firebase/firestore';
 
 
 import { yupResolver} from '@hookform/resolvers/yup'
@@ -25,13 +27,29 @@ export default function Form() {
             resolver: yupResolver(schema)
     })
 
+ 
+
     function handleSignIn(data) {
         auth()
-  .createUserWithEmailAndPassword(data.Email, data.Password)
-
-  .then((userCredential) => {
+  .createUserWithEmailAndPassword(
+    data.Email,
+     data.Password
+     )
+  .then((userCredential, ) => {
     const user = userCredential.user
+    user.updateProfile({
+        displayName: 'Alias',
+    })
+        firestore()
+  .collection('users')
+  .doc(user.uid)
+  .set({
+   email: user.email,
+   name: data.Name,
+  })
     console.log('user', '=>', user);
+    
+
   }).catch(error => {
     if (error.code === 'auth/email-already-in-use') {
         Alert.alert('That email address is already in use!');

@@ -20,7 +20,7 @@ export default function FoodFlatlist({ Topo, Categories}) {
         const getFood = async() => {
             await firestore()
             .collection("foods")
-            .where("category", "==", Categories)
+            .where("category", "array-contains", Categories)
             .orderBy('price')
             .get()
             .then(querySnapshot => {

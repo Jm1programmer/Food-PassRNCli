@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Ficon from 'react-native-vector-icons/FontAwesome'
+
 import Aicon from 'react-native-vector-icons/AntDesign'
 import { useNavigation } from "@react-navigation/native";
 
@@ -25,7 +26,7 @@ export default function ScreenMenu() {
        navigation.navigate('ShoppingCart')
     
    }}>
-         <Aicon style={styles.Icon} name="shoppingcart" size={30} color="#E81C23" />
+          <Ficon name="heart-o" size={30} color={"#E81C23"}/>
    </TouchableOpacity>
 
    <TouchableOpacity onPress={() => {
