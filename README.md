@@ -89,7 +89,7 @@ $ git clone https://github.com/Jm1programmer/Food-PassRNCli.git
 $ cd Food-PassRNCli
 # install the dependencies
 $ npm install
-$ yarn add @react-native-firebase/app
+
 ```
 
 
@@ -99,7 +99,7 @@ Run Mobile
 # Metro
 $ npm start
 # Run Android
-$ npx react-native run-android
+$ npm run android
 ```
 
 <h2>🫵 Contributing </h2>
