@@ -44,9 +44,10 @@ With a lot of effort and dedication made by this group , we managed to create an
 </p>
 
 <h1 align="center" >
-    <img src="https://github.com/Jm1programmer/Food-PassRNCli/blob/main/src/Login.gif?raw=true" alt="FoodPass"  height="445"  >
-   <img src="https://github.com/Jm1programmer/Food-PassRNCli/blob/main/src/home%20(2).gif?raw=true" alt="FoodPass"  height="445" >
- <img src="https://github.com/Jm1programmer/Food-PassRNCli/blob/main/src/ChangingScreens.gif?raw=true" alt="FoodPass"  height="445"  >
+    <img src="https://github.com/Jm1programmer/Food-PassRNCli/assets/89549484/143ea159-9cfb-4a7b-bfce-130d92076aed" alt="FoodPass"  height="445"  >
+   <img src="https://github.com/Jm1programmer/Food-PassRNCli/assets/89549484/75b08294-ca62-427d-ab41-ab5a90fcae83" alt="FoodPass"  height="445" >
+ <img src="https://github.com/Jm1programmer/Food-PassRNCli/assets/89549484/45b3f07c-fdbd-41b5-b2a7-8c969c4823f9" alt="FoodPass"  height="445"  >
+
 
 
 
